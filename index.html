@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YouTube Video Search</h1>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for videos...">
+            <button id="search-button">Search</button>
+            <div class="settings">
+                <label for="results-count">Results:</label>
+                <select id="results-count">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="history-container">
+            <h3>Recent Searches</h3>
+            <ul id="search-history"></ul>
+            <button id="clear-history">Clear History</button>
+        </div>
+        
+        <div id="results-container"></div>
+        
+        <div id="player-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="player"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="app.js"></script>
+</body>
+</html>
